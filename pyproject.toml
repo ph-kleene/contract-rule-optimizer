@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "contract-rule-optimizer"
+version = "0.1.0"
+description = "A two-layer pipeline for polishing contract review rules and checking them against contracts."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "Huang Peng (ph-kleene)"}]
+dependencies = []
+keywords = ["contracts", "llm", "rule-optimization", "legal-tech"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.12",
+  "License :: OSI Approved :: MIT License",
+]
+
+[project.scripts]
+contract-rule-optimizer = "contract_rule_optimizer.cli:main"
+
+[project.urls]
+Repository = "https://github.com/ph-kleene/contract-rule-optimizer"
+Issues = "https://github.com/ph-kleene/contract-rule-optimizer/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
